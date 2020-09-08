@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Minesweeper</title>
+    {% load static %}
+    <link rel="shortcut icon" type="image/png" href="{% static 'favicon.ico' %}"/>
+    <style>
+        html {
+            height: 100%;
+        }
+        body {
+            overflow: auto;
+            height: 100%;
+            padding: 0;
+            margin: 0;
+        }
+        .main_block {
+            width: 100vw;
+            height: 100%;
+            min-width: 820px;
+            min-height: 600px;
+            position: absolute;
+            background: dimgray;
+        }
+    </style>
+    {% block style %}{% endblock %}
+</head>
+<body style="visibility: hidden" onload="setTimeout('document.body.style.visibility = \'visible\'', 0)">
+    <div class="main_block">
+        {% block body %}{% endblock %}
+    </div>
+</body>
+</html>

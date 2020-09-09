@@ -1,4 +1,4 @@
-# Sea Battle
+# Minesweeper
 
 This app is my vision of the classic Minesweeper game. In this project i focused on using OOP. The emphasis was placed on the back-end, so in terms of the front-end, there are some nuances of optimization on mobile devices, which in turn don't affect the correct work of the application.
 
@@ -24,7 +24,7 @@ If the number of bombs is specified less than the established limits, then the n
 If the game parameters in custom difficulty aren't defined, then they will be set by default: the size of the field 
 will be 20 by 30 with 145 bombs.
 
-<p align="center"><img src="screenshots/minesweeper_1_1.png" width="400"/> <img src="screenshots/minesweeper_2.png" width="400"/></p>
+<p align="center"><img src="screenshots/minesweeper_1.png" width="400"/> <img src="screenshots/minesweeper_2.png" width="400"/></p>
 
 
 ## Getting Started

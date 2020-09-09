@@ -39,13 +39,27 @@ class DifficultyForm(forms.Form):
 
     def clean_rows(self):
         rows = self.cleaned_data['rows']
-        rows = int(rows) if rows.isdigit() else 20
-        return rows if rows >= 9 else 9
+        if rows.isdigit():
+            rows = int(rows)
+            if rows < 9:
+                rows = 9
+            elif rows > 25:
+                rows = 25
+        else:
+            rows = 20
+        return rows
 
     def clean_columns(self):
         columns = self.cleaned_data['columns']
-        columns = int(columns) if columns.isdigit() else 30
-        return columns if columns >= 9 else 9
+        if columns.isdigit():
+            columns = int(columns)
+            if columns < 9:
+                columns = 9
+            elif columns > 50:
+                columns = 50
+        else:
+            columns = 30
+        return columns
 
     def clean(self):
         cleaned_data = super().clean()

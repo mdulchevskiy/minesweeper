@@ -1,30 +1,34 @@
 # Minesweeper
 
-This app is my vision of the classic Minesweeper game. In this project i focused on using OOP. The emphasis was placed on the back-end, so in terms of the front-end, there are some nuances of optimization on mobile devices, which in turn don't affect the correct work of the application.
+This app is my vision of the classic Minesweeper game. In this project i focused on using OOP. The emphasis was 
+placed on the back-end, so in terms of the front-end, there are some nuances of optimization on mobile devices, 
+which in turn don't affect the correct work of the application.
 
 Link to Heroku application: www.md-minesweeper.herokuapp.com  
 
 ## Description
 
+- game includes four difficulty levels: beginner, skillful, expert and custom. There are some limits for custom
+difficulty:  
+  - number of rows shouldn't be less than 9 rows or more than 25 rows;
+  - number of columns shouldn't be less than 9 columns or more than 50 columns;
+  - number of bombs shouldn't be 0 or exceed half of the field area.
+  
+  If user entered field dimension less than set limits, size of the field will be 9 by 9. 
+  If user entered field dimension more than set limits, size of the field will be 25 by 50.
+  If user entered the number of bombs more than set limits, the number of bombs will be half of the field area.
+  If field parameters in custom difficulty aren't defined, they will be set by default: size of the field will be
+  20 by 30 with 145 bombs;
+  
 - when a player left-clicks on a cell, the game will uncover it. If there are no mines adjacent to that particular cell, 
 the cell will display a blank tile, and all adjacent cells will automatically be uncovered. Right-clicking on a cell 
 will flag it, causing a flag to appear on it. Note that flagged cells are still covered, and a player can click on it 
-to uncover it, like a normal covered cell;
+to uncover it, like a normal covered cell.
 
-- the game includes four difficulty levels: beginner, skillful, expert and custom. There are some limits for custom
-difficulty:  
-  - the number of rows can't be less than 9 rows or more than 25 rows;
-  - the number of columns can't be less than 9 columns or more than 50 columns;
-  - the number of bombs can't be equal to 0 or exceed half of the field.
-  
-  If the dimension of the field is specified less than the established limits, then the size of the field will be 9 by 9. 
-If the dimension of the field is specified more than the established limits, then the size of the field will be 25 by 50.
-If the number of bombs is specified more than the established limits, then the number of bombs will be equal to half of the field.
-If the number of bombs is specified less than the established limits, then the number of bombs will be equal to 1.
-If the game parameters in custom difficulty aren't defined, then they will be set by default: the size of the field 
-will be 20 by 30 with 145 bombs.
-
-<p align="center"><img src="screenshots/minesweeper_1.png" width="400"/> <img src="screenshots/minesweeper_2.png" width="400"/></p>
+<p align="center">
+<img src="screenshots/minesweeper_1.png" width="400"/> 
+<img src="screenshots/minesweeper_2.png" width="400"/>
+</p>
 
 
 ## Getting Started

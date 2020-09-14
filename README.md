@@ -4,7 +4,7 @@ This app is my vision of the classic Minesweeper game. In this project i focused
 placed on the back-end, so in terms of the front-end, there are some nuances of optimization on mobile devices, 
 which in turn don't affect the correct work of the application.
 
-Link to Heroku application: www.md-minesweeper.herokuapp.com  
+Link to Heroku application: https://md-minesweeper.herokuapp.com/
 
 ## Description
 

@@ -26,7 +26,7 @@ class Game:
         return data_dict
 
     def start_game(self):
-        """Наинчает игру."""
+        """Начинает игру."""
         self.game_status = 'Started'
         self.field = Field(self.difficulty)
         self.field.create_field()
@@ -34,7 +34,7 @@ class Game:
         self.field.set_cells_info()
 
     def get_game_status(self):
-        """Возвразает статус игры."""
+        """Возвращает статус игры."""
         cells = self.field.field_dict.values()
         lose = sum([cell.visible for cell in cells if cell.bomb]) > 0
         win = all([cell.visible for cell in cells if not cell.bomb])

@@ -47,7 +47,7 @@ class Field:
         return data_dict
 
     def create_field(self):
-        """Создает игровое поле, а также добавляет в словарь все созданные объекты класса Cell."""
+        """Создает игровое поле; добавляет в словарь все созданные объекты класса Cell."""
         field = [[Cell(i, j) for j in range(self.field_size[1])] for i in range(self.field_size[0])]
         self.__field_dict.update({cell.coordinate: cell for cell in sum(field, [])})
         self.field = field
